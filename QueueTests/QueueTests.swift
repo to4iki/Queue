@@ -11,7 +11,7 @@ import Queue
 
 class QueueTests: XCTestCase {
     
-    var queue: Queue<Int> = Queue([])
+    var queue = Queue<Int>()
     
     override func setUp() {
         super.setUp()
