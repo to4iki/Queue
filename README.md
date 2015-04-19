@@ -2,10 +2,14 @@ Queue
 =====
 
 [![Build Status](https://travis-ci.org/to4iki/Queue.svg)][status]
+[![Version](https://img.shields.io/cocoapods/v/Queue.svg?style=flat)][version]
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)][license]
+[![Platform](https://img.shields.io/cocoapods/p/Queue.svg?style=flat)][platform]
 
 [status]: https://travis-ci.org/to4iki/Queue
+[version]: http://cocoadocs.org/docsets/Queue
 [license]: https://github.com/to4iki/Queue/master/LICENSE
+[platform]: http://cocoadocs.org/docsets/Queue
 
 First-In-First-Out (FIFO) Simple Queue
 
