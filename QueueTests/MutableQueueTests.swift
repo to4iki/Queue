@@ -11,7 +11,7 @@ import Queue
 
 class QueueTests: XCTestCase {
     
-    var queue = Queue<Int>()
+    var queue = MutableQueue<Int>()
     
     override func setUp() {
         super.setUp()

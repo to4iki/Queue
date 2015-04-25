@@ -1,6 +1,6 @@
 //
-//  Queue.swift
-//  Queue
+//  MutableQueue.swift
+//  MutableQueue
 //
 //  Created by to4iki on 4/14/15.
 //  Copyright (c) 2015 to4iki. All rights reserved.
@@ -10,7 +10,7 @@
 *  `Queue` objects implement data structures that allow to
 *  insert and retrieve elements in a first-in-first-out (FIFO) manner.
 */
-public struct Queue<T>: MutableQueueType {
+public struct MutableQueue<T>: MutableQueueType {
     
     /// The type of element stored by this `Queue`
     typealias Element = T
@@ -160,8 +160,8 @@ public struct Queue<T>: MutableQueueType {
     
     :returns: a mutable queue consisting of all elements of this mutable queue except the first one.
     */
-    public func tail() -> Queue {
-        return Queue(Array(elements[1..<count]))
+    public func tail() -> MutableQueue {
+        return MutableQueue(Array(elements[1..<count]))
     }
 }
 
@@ -171,7 +171,7 @@ Enqueue a single element to this queue
 :param: queue mutable queue.
 :param: elem  the element to append.
 */
-public func += <T>(inout queue: Queue<T>, elem: T) {
+public func += <T>(inout queue: MutableQueue<T>, elem: T) {
     queue.enqueue(elem)
 }
 
@@ -181,6 +181,6 @@ Enqueue all elements to this queue
 :param: queue mutable queue.
 :param: elems the elements to append.
 */
-public func ++= <T>(inout queue: Queue<T>, elems: [T]) {
+public func ++= <T>(inout queue: MutableQueue<T>, elems: [T]) {
     queue.enqueue(elems)
 }
