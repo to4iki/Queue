@@ -10,7 +10,7 @@
 *  `Queue` objects implement data structures that allow to
 *  insert and retrieve elements in a first-in-first-out (FIFO) manner.
 */
-public struct MutableQueue<T>: MutableQueueType {
+public struct MutableQueue<T: Equatable>: MutableQueueType {
     
     /// The type of element stored by this `Queue`
     typealias Element = T
@@ -163,6 +163,27 @@ public struct MutableQueue<T>: MutableQueueType {
     public func tail() -> MutableQueue {
         return MutableQueue(Array(elements[1..<count]))
     }
+}
+
+/**
+*  Printable
+*/
+extension MutableQueue {
+    public var description: String {
+        return "MutableQueue: elements: \(elements)"
+    }
+}
+
+/**
+Equatable
+
+:param: lhs Left hand side
+:param: rhs Right hand side
+
+:returns: inequal
+*/
+public func == <T: Equatable>(lhs: MutableQueue<T>, rhs: MutableQueue<T>) -> Bool {
+    return lhs.elements == rhs.elements
 }
 
 /**

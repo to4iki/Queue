@@ -6,7 +6,10 @@
 //  Copyright (c) 2015 to4iki. All rights reserved.
 //
 
-public protocol QueueType {
+/**
+*  A type of Base Queue.
+*/
+public protocol QueueType: Equatable, Printable {
     
     /// `true` if and only if the `Queue` is empty
     var isEmpty: Bool { get }
@@ -19,7 +22,8 @@ public protocol QueueType {
 *  A type of first-in-first-out (FIFO) Mutable Queue.
 */
 public protocol MutableQueueType: QueueType {
-    typealias Element
+    
+    typealias Element: Equatable
     
     /// Adds all elements to the queue.
     mutating func enqueue(elems: Element...)
@@ -33,7 +37,8 @@ public protocol MutableQueueType: QueueType {
 *  A type of first-in-first-out (FIFO) Immutable Queue.
 */
 public protocol ImmutableQueueType: QueueType {
-    typealias Element
+    
+    typealias Element: Equatable
     
     /// Adds all elements to the queue.
     func enqueue(elems: Element...) -> [Element]
