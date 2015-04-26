@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E2A641E1AEC85E9006156AE /* ImmutableQueueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2A641D1AEC85E9006156AE /* ImmutableQueueTests.swift */; };
+		1EDD9FB41AEB948B003712E7 /* ImmutableQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDD9FB31AEB948B003712E7 /* ImmutableQueue.swift */; };
 		4D365BDF1ADD832500992C79 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D365BDE1ADD832500992C79 /* Operators.swift */; };
 		4D57470E1ADD545D005D436D /* Queue.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D57470D1ADD545D005D436D /* Queue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4D5747141ADD545D005D436D /* Queue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D5747081ADD545D005D436D /* Queue.framework */; };
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E2A641D1AEC85E9006156AE /* ImmutableQueueTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImmutableQueueTests.swift; sourceTree = "<group>"; };
+		1EDD9FB31AEB948B003712E7 /* ImmutableQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImmutableQueue.swift; path = immutable/ImmutableQueue.swift; sourceTree = "<group>"; };
 		4D365BDE1ADD832500992C79 /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		4D5747081ADD545D005D436D /* Queue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Queue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D57470C1ADD545D005D436D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,6 +63,7 @@
 		1E4BFBDE1AEB7011009CD087 /* immutable */ = {
 			isa = PBXGroup;
 			children = (
+				1EDD9FB31AEB948B003712E7 /* ImmutableQueue.swift */,
 			);
 			name = immutable;
 			sourceTree = "<group>";
@@ -105,6 +110,7 @@
 		4D5747171ADD545D005D436D /* QueueTests */ = {
 			isa = PBXGroup;
 			children = (
+				1E2A641D1AEC85E9006156AE /* ImmutableQueueTests.swift */,
 				4D57471A1ADD545D005D436D /* MutableQueueTests.swift */,
 				4D5747181ADD545D005D436D /* Supporting Files */,
 			);
@@ -236,6 +242,7 @@
 			files = (
 				4D5747251ADD5503005D436D /* MutableQueue.swift in Sources */,
 				4DE172281AE3C9FD00456A7C /* QueueType.swift in Sources */,
+				1EDD9FB41AEB948B003712E7 /* ImmutableQueue.swift in Sources */,
 				4D365BDF1ADD832500992C79 /* Operators.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,6 +251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E2A641E1AEC85E9006156AE /* ImmutableQueueTests.swift in Sources */,
 				4D57471B1ADD545D005D436D /* MutableQueueTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

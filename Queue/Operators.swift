@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 to4iki. All rights reserved.
 //
 
-/// Appends
+/// Muutable Appends
 infix operator ++= {
     associativity right
     precedence 120

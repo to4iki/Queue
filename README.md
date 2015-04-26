@@ -11,7 +11,7 @@ Queue
 [license]: https://github.com/to4iki/Queue/master/LICENSE
 [platform]: http://cocoadocs.org/docsets/Queue
 
-First-In-First-Out (FIFO) Simple Queue
+First-In-First-Out (FIFO) Simple Queue(immutable|mutable)
 
 ## Description
 
@@ -20,8 +20,29 @@ insert and retrieve elements in a first-in-first-out (FIFO) manner.
 
 ## Usage
 
+### ImmutableQueue<T>
 ```swift
-var queue = Queue<Int>()
+let queue = ImmutableQueue<Int>()
+```
+
+#### enqueue
+```swift
+let q1 = queue.enqueue(1) // ImmutableQueue(1)
+let q123 = q1.enqueue(2,3) // ImmutableQueue(1,2,3)
+let q12345 = q123.enqueue([4,5]) // ImmutableQueue(1,2,3,4,5)
+```
+
+#### dequeue
+```swift
+let q123 = queue.enqueue(1,2,3)
+let (q, qs) = q123.dequeue()
+q // 1
+qs // [2,3]
+```
+
+### MutableQueue<T>
+```swift
+var queue = MutableQueue<Int>()
 ```
 
 #### enqueue(+=)
@@ -56,7 +77,17 @@ queue.count // 0
 
 ## Methods
 
-### mutable.Queue<T>
+### immutable.ImmutableQueue<T>
+
+- Instance Methods
+    - `enqueue(elems: T...) -> ImmutableQueue`
+    - `enqueue(elems: [T]) -> ImmutableQueue`
+    - `dequeue() -> (head: T, tail: [T])`
+    - `dequeueOption() -> (head: T, tail: [T])?`
+    - `front() -> T?`
+    - `tail() -> ImmutableQueue`
+
+### mutable.MutableQueue<T>
 
 - Instance Methods
     - `enqueue(elems: T...)`
@@ -67,7 +98,7 @@ queue.count // 0
     - `dequeueAll(predicate: T -> Bool) -> [T]`
     - `clear()`
     - `front() -> T?`
-    - `tail() -> Queue`
+    - `tail() -> MutableQueue`
 
 ## Installation
 

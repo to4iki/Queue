@@ -31,6 +31,9 @@ public protocol MutableQueueType: QueueType {
     /// Returns a tuple with the first element in the queue,
     /// and a new queue with this element removed.
     mutating func dequeue() -> (head: Element, tail: [Element])
+    
+    /// Optionally retrieves the first element and a queue of the remaining elements.
+    mutating func dequeueOption() -> (head: Element, tail: [Element])?
 }
 
 /**
@@ -39,11 +42,15 @@ public protocol MutableQueueType: QueueType {
 public protocol ImmutableQueueType: QueueType {
     
     typealias Element: Equatable
+    typealias Queue: Equatable
     
     /// Adds all elements to the queue.
-    func enqueue(elems: Element...) -> [Element]
+    func enqueue(elems: Element...) -> Queue
     
     /// Returns a tuple with the first element in the queue,
     /// and a new queue with this element removed.
     func dequeue() -> (head: Element, tail: [Element])
+    
+    /// Optionally retrieves the first element and a queue of the remaining elements.
+    mutating func dequeueOption() -> (head: Element, tail: [Element])?
 }

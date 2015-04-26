@@ -7,19 +7,21 @@
 //
 
 /**
-*  `Queue` objects implement data structures that allow to
+*  `Mutable Queue` objects implement data structures that allow to
 *  insert and retrieve elements in a first-in-first-out (FIFO) manner.
 */
 public struct MutableQueue<T: Equatable>: MutableQueueType {
     
-    /// The type of element stored by this `Queue`
+    /// The type of element stored by this `MutableQueue`
     typealias Element = T
     
     /// Sequence with elements
-    public var elements: [T] = []
+    public var elements: [T]
     
     /// Construct an empty Array
-    public init() {}
+    public init() {
+        self.elements = []
+    }
     
     /// Construct from an arbitrary sequence with elements of type `T`
     public init(_ elements: [T]) {

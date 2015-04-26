@@ -9,7 +9,7 @@
 import XCTest
 import Queue
 
-class QueueTests: XCTestCase {
+class MutableQueueTests: XCTestCase {
     
     var queue = MutableQueue<Int>()
     
