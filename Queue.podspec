@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
   s.name = "Queue"
-  s.version = "0.1.0"
+  s.version = "0.2.0"
   s.license = "MIT"
-  s.summary = "First-In-First-Out (FIFO) Simple Queue"
+  s.summary = "First-In-First-Out (FIFO) Simple Queue(immutable|mutable)"
   s.homepage = "https://github.com/to4iki/Queue"
   s.social_media_url = 'http://twitter.com/to4iki'
   s.author = { "tsk takezawa" => "tsk.take815@gmail.com" }
